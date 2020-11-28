@@ -1,8 +1,26 @@
-<p>get-employee works!</p>
+<!-- <p>get-employee works!</p>
 <div *ngFor="let emp of employee">
     <ul>
         <li>{{emp.id}}</li>
         <li>{{emp.empName}}</li>
         <li>{{emp.salary}}</li>
     </ul>
-</div>
+</div> -->
+<div class="container">
+    <table class="datatable">
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employee">
+          <td>{{emp.id}}</td>
+          <td>{{emp.empName}}</td>
+          <td>{{emp.salary}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

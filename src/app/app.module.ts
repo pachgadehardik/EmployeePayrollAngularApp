@@ -7,6 +7,9 @@ import { AddEmployeeComponent } from 'src/component/add-employee/add-employee.co
 import {HttpClientModule} from '@angular/common/http';
 import { EmployeeService } from 'src/service/employee.service';
 import { GetEmployeeComponent } from 'src/component/get-employee/get-employee.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material-module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,8 +19,12 @@ import { GetEmployeeComponent } from 'src/component/get-employee/get-employee.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    DemoMaterialModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
