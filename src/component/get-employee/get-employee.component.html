@@ -1,17 +1,29 @@
-<div class="container">
+<div class="main-content" style="overflow-x: auto;">
+  <div class="header">
+    <button mat-raised-button (click)="logout()" style="float: right;">Logout</button>
+    <button mat-raised-button (click)="addEmployee()" style="float: right; margin-right: 5px;">Add Employee</button>
+  </div>
     <table class="datatable">
       <thead>
           <tr>
-            <th>Id</th>
+            <!-- <th>Id</th> -->
             <th>Name</th>
+            <th>Gender</th>
+            <th>Department</th>
             <th>Salary</th>
+            <th>Action</th>
           </tr>
       </thead>
       <tbody>
         <tr *ngFor="let emp of employee">
-          <td>{{emp.id}}</td>
+          <!-- <td>{{emp.id}}</td> -->
           <td>{{emp.empName}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.department}}</td>
           <td>{{emp.salary}}</td>
+          <img id="${emp.id}" (click)="delete(emp)" alt="delete" src="assets\\icons\\delete-black.svg">
+            &nbsp;
+          <img id="${emp.id}" (click)="update(emp)" alt="update" src="assets\\icons\\update.svg">
         </tr>
       </tbody>
     </table>

@@ -12,7 +12,7 @@ table.datatable tr.odd_col {
 	background: none;
 }
 table.datatable tr.even_col {
-	background: #ddd;
+	background: rgb(191, 121, 121);
 }
 table.datatable td {
 	font-size:10pt;
@@ -27,4 +27,12 @@ table.datatable th {
 	color: #fff;
 	background-color: black;
 	font-family: sans-serif;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f7f7f7; */
+    max-height: 100vh;
+    padding: 30px 0 10px;
+    box-sizing: border-box;
 }
