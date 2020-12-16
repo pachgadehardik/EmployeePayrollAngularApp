@@ -54,13 +54,13 @@ export class AddEmployeeComponent implements OnInit {
 
   getErrorForName(){
     return this.registerForm.get('empName').hasError('required') ? 'Name Should not be blank':
-    this.registerForm.get('empName').hasError('minLength') ? 'Name Should Contain Min 2 chars':
+    this.registerForm.get('empName').hasError('minlength') ? 'Name Should Contain Min 2 chars':
     '';
   }
 
   getErrorForSalary(){
     return this.registerForm.get('salary').hasError('required') ? 'Salary Should not be blank':
-    this.registerForm.get('salary').hasError('minLength') ? 'Salary Should Contain min 5 digits':
+    this.registerForm.get('salary').hasError('minlength') ? 'Salary Should Contain min 5 digits':
     '';
   }
 

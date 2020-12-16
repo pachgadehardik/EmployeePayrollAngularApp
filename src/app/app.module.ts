@@ -10,12 +10,14 @@ import { GetEmployeeComponent } from 'src/component/get-employee/get-employee.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from 'src/component/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GetEmployeeComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
