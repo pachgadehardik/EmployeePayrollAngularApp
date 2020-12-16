@@ -39,15 +39,7 @@ export class GetEmployeeComponent implements OnInit {
 
   update(node){
     console.log(node.id)
-    this.employeeService.getById(node.id).subscribe(response =>{
-       response.obj
-      console.log("inside")
-      this.router.navigate(['add'], response.obj)
-    }),
-    error =>{
-      console.log(error)
-    }
-    
+    this.router.navigate(['add',node.id])
   }
 
   delete(node){

@@ -42,4 +42,10 @@ export class EmployeeService {
     })
   }
 
+  update(data):Observable<any>{
+    return this.http.put(this.baseURL+"/employee/update/"+data.id,data,{
+      headers:new HttpHeaders().append("Authorization",localStorage.getItem("token"))
+    });
+  }
+
 }

@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:"add", component:AddEmployeeComponent},
   {path:"home",component:GetEmployeeComponent},
   {path:"",component:LoginComponent},
+  {path:"add/:id",component:AddEmployeeComponent},
   {path:"**",component:PagenotfoundComponent},
 ];
 
