@@ -1,23 +1,5 @@
-<!-- <div class="main">
-    <p>Login Page</p>
-    <form class="formDiv" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="form-group" class="formWidth">
-            <label for="username">Username</label>
-            <input type="text" formControlName="userName" class="form-control" />
-        </div>
-        <div class="form-group" class="formWidth">
-            <label for="password">Password</label>
-            <input type="password" formControlName="userPassword" class="form-control" />
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">
-                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                Login
-            </button>
-        </div>
-    </form>
-</div> -->
-<mat-card>
+<div fxLayout ="row" fxFlex.xs="100" >
+<mat-card style="background-color:azure;" >
     <mat-card-title>Login</mat-card-title>
 <mat-card-content>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -44,3 +26,4 @@
 </form>
 </mat-card-content>
 </mat-card>
+</div>

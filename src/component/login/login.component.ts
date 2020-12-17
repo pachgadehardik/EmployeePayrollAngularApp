@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   loading = false;
+  authToken:any=true;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    localStorage.removeItem('authToken')
     this.loginForm = this.formBuilder.group({
       userName: ['', Validators.required],
       userPassword: ['', Validators.required]
@@ -40,6 +42,7 @@ export class LoginComponent implements OnInit {
         data => {
           console.log(data.obj)
           localStorage.setItem('token',data.obj)
+          localStorage.setItem('authToken',this.authToken)
           if (data.statusCode == 200) {
             this.router.navigate(['home'])
           }
