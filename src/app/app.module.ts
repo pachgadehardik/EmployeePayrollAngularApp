@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from 'src/component/login/login.component';
+import { AuthguardGuard } from 'src/service/authguard.guard';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { LoginComponent } from 'src/component/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    FlexLayoutModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService,AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
