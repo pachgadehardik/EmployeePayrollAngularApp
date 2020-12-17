@@ -56,6 +56,7 @@ export class GetEmployeeComponent implements OnInit {
 
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('authToken');
     console.log("Logout Called")
     this.router.navigate(['']);
   }
