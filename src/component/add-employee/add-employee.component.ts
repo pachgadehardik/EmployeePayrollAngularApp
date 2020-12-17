@@ -36,7 +36,7 @@ export class AddEmployeeComponent implements OnInit {
       gender: [''],
       department: ['']
     });
-    
+
     if(this.id!= undefined)
       this.getEmployeeById(this.id);
   }
@@ -109,8 +109,4 @@ export class AddEmployeeComponent implements OnInit {
     this.registerForm.get('salary').hasError('minlength') ? 'Salary Should Contain min 5 digits':
     '';
   }
-
-  // @Input() error: string | null;
-
-  // @Output() submitEM = new EventEmitter();
 }
