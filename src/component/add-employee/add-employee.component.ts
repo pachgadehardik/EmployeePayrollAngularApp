@@ -5,30 +5,42 @@ import { EmployeeService } from 'src/service/employee.service';
 import { Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
+interface Department {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.scss']
 })
+
 export class AddEmployeeComponent implements OnInit {
   employeeObj:any
   id:any
   edit = false
   registerForm: FormGroup;
+  selectedValue: string;
+  departments: Department[] = [
+    {value: 'Security', viewValue: 'Security'},
+    {value: 'IT', viewValue: 'IT'},
+    {value: 'Tech', viewValue: 'Tech'}, 
+    {value: 'Admin', viewValue: 'Admin'},
+    {value: 'HR', viewValue: 'HR'},
+    {value: 'Legal', viewValue: 'Legal'}
+  ];
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private userService: EmployeeService,
     private activatedRoute : ActivatedRoute
+    
   ) {
-    console.log("nside Const"+this.router.getCurrentNavigation().extras)
-    this.employeeObj = this.router.getCurrentNavigation().extras;
-  }
-  ngOnInit(): void {
-
     this.id = this.activatedRoute.snapshot.params.id;
     console.log("ID++++++"+this.id)
-    
+  }
+  ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       id:[],
       empName: ['', [Validators.required, Validators.minLength(2)]],
