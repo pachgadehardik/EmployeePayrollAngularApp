@@ -1,13 +1,17 @@
 <div class="main-content" style="overflow-x: auto;" fxLayout="column" fxLayoutAlign="space-evenly between" >
-  <mat-card style="background-color: antiquewhite;" >
-  <!-- <div class="header"> -->
-    Employee Count:  {{employee.length}}
-    <button mat-raised-button (click)="logout()" style="float: right; color:brown;">Logout</button>
-    <button mat-raised-button (click)="addEmployee()" style="float: right; margin-right: 5px;color: blue;">Add Employee</button>
-  <!-- </div> -->
-  </mat-card>
-  <mat-card style="border: 5 solid;" >
-    <table class="datatable" style="background-color: cornsilk;">
+  <div>
+    <mat-card class="card" style="background-color: #f7f7f7;">
+      <div class="emp-detail-text">Employee Count
+        <div class="employee-count">{{employee.length}}</div>
+        <button mat-raised-button (click)="addEmployee()" style="float: right; margin-right: 5px;color: #82a70c;">Add
+          Employee</button>
+          
+        <button mat-raised-button (click)="logout()" style="float: right; color:brown;">Logout</button>
+      </div>
+    </mat-card>
+  </div>
+  <mat-card class="card" style="border: 5 solid;background-color: #f7f7f7;" >
+    <table class="table">
       <thead>
           <tr>
             <!-- <th>Id</th> -->
@@ -23,7 +27,7 @@
           <!-- <td>{{emp.id}}</td> -->
           <td>{{emp.empName}}</td>
           <td>{{emp.gender}}</td>
-          <td>{{emp.department}}</td>
+          <td class="dept-label">{{emp.department}}</td>
           <td>{{emp.salary}}</td>
           <img id="${emp.id}" (click)="delete(emp)" alt="delete" src="assets\\icons\\delete-black-18dp.svg" style="margin-left: 30px;">
             &nbsp;
