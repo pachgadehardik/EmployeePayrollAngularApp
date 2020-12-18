@@ -110,6 +110,10 @@ export class AddEmployeeComponent implements OnInit {
         });
   }
 
+  cancel(){
+    this.router.navigate(['home'])
+  }
+
   getErrorForName(){
     return this.registerForm.get('empName').hasError('required') ? 'Name Should not be blank':
     this.registerForm.get('empName').hasError('minlength') ? 'Name Should Contain Min 2 chars':

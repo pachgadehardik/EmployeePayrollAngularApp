@@ -2,7 +2,7 @@
 <mat-card class="form" style="background-color: aliceblue;" fxFlex="70"> 
     <mat-card-title>Employee Form</mat-card-title>
     <mat-card-content >
-        <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
             <div class="row-content">
                 <label class="label text" for="name" style="font-size: large;">Name</label>
                     <mat-form-field appearance="outline">
@@ -47,6 +47,8 @@
 
             <div class="button">
                 <button [disabled]="!registerForm.valid" type="submit" style="color: cadetblue;" mat-button>Save</button>
+                <!-- <button (onclick)="cancel()" style="color: cadetblue;" mat-button>Cancel</button> -->
+
             </div>
         </form>
     </mat-card-content>
