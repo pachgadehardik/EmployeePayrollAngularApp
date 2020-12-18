@@ -3,10 +3,9 @@
     <mat-card class="card" style="background-color: #f7f7f7;">
       <div class="emp-detail-text">Employee Count
         <div class="employee-count">{{employee.length}}</div>
+        <button mat-raised-button (click)="logout()" style="float: right; color:brown;">Logout</button>
         <button mat-raised-button (click)="addEmployee()" style="float: right; margin-right: 5px;color: #82a70c;">Add
           Employee</button>
-          
-        <button mat-raised-button (click)="logout()" style="float: right; color:brown;">Logout</button>
       </div>
     </mat-card>
   </div>
@@ -28,7 +27,7 @@
           <td>{{emp.empName}}</td>
           <td>{{emp.gender}}</td>
           <td class="dept-label">{{emp.department}}</td>
-          <td>{{emp.salary}}</td>
+          <td>&#8377; {{emp.salary}}</td>
           <img id="${emp.id}" (click)="delete(emp)" alt="delete" src="assets\\icons\\delete-black-18dp.svg" style="margin-left: 30px;">
             &nbsp;
           <img id="${emp.id}" (click)="update(emp)" alt="update" src="assets\\icons\\create-black-18dp.svg" style="margin-left: 30px;">
